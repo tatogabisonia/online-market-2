@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Catalog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<div class="topfutter">
+  <a href="index.html" style="text-decoration:none"><h1>Online Market</h1></a>
+  <div class="logo">
+    <!-- თქვენი ლოგო შეიძლება აქ იყოს -->
+  </div>
+  <div class="search-bar">
+    <input type="text" placeholder="Search products...">
+    <button type="submit">ძებნა</button>
+  </div>
+  <div class="cart">
+    <a>
+      <img src="logoimage.png" alt="Cart" class="cart-icon">
+    </a>
+    
+  </div>
+  <div class="basket">
+    <button id="basketButton" class="basket-btn">
+      <span class="basket-icon">🧺</span>
+      <span id="basketCount" class="basket-count">0</span>
+    </button>
+  </div>
+  
+  <button id="addToBasketButton" class="add-btn">დამატება კალათში</button>
+  
+  
+</div>
+
+<body>
+  <div class="container">
+    <!-- Sidebar for Filters -->
+    <aside class="sidebar">
+        <h2>📌Filter</h2>
+      <div class="filter-section">
+        <ul class="filter-list">
+          <li>
+            <input type="checkbox" id="category1">
+            <label for="category1">ტელეფონის აქსესუარები</label>
+          </li>
+          <li>
+            <input type="checkbox" id="category2">
+            <label for="category2">მანქანის აქსესუარები</label>
+          </li>
+          <li>
+            <input type="checkbox" id="category3">
+            <label for="category3">ყურსასმენები და აუდიო აქსესუარები</label>
+          </li>
+        </ul>
+      </div>
+      <div class="filter-section">
+        <h3>Price Range</h3>
+        <br>
+        <div class="price-range">
+          <label for="minPrice">Min:</label>
+          <input type="number" id="minPrice" min="0" value="0" placeholder="Min price">
+          <br>
+          <br>
+          <label for="maxPrice">Max:</label>
+          <input type="number" id="maxPrice" min="0" value="100" placeholder="Max price">
+        </div>
+      </div>
+      <br>
+      <button id="filterBtn" class="apply-filters-btn">ძებნა</button>
+    </aside>
+
+    <!-- Main Product Grid -->
+    <main class="product-grid">
+      <!-- Dynamically loaded products -->
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2024 Product Catalog. All rights reserved.</p>
+  </footer>
+  <script src="basket.js"></script>
+  <script src="scripts.js"></script>
+</body>
+
+</html>
